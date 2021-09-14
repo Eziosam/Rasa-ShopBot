@@ -20,15 +20,35 @@ intents:
 - bot_challenge:
     use_entities: true
 - product_available:
-    use_entities: true
+    use_entities:
+    - pname
 - promo_available:
-    use_entities: true
+    use_entities:
+    - pname
 - product_quantity:
-    use_entities: true
+    use_entities:
+    - pname
 - product_price:
+    use_entities:
+    - pname
+- product_shop:
+    use_entities:
+    - shopname
+- my_address:
+    use_entities:
+    - country
+- delivery_charge:
+    use_entities: true
+- return_policy:
+    use_entities: true
+- payment_policy:
+    use_entities: true
+- delivery_policy:
     use_entities: true
 entities:
 - pname
+- shopname
+- country
 slots: {}
 responses:
   utter_greet:
@@ -52,6 +72,18 @@ responses:
   - text: yes available.
   utter_fetch_product_promo:
   - text: no ,no promoavailable .
+  utter_fetch_product_shop:
+  - text: yes sir we have what you need.
+  utter_ask_address:
+  - text: ok may i know your address.
+  utter_answer_fee:
+  - text: it is 150 tk only sir.
+  utter_return_rule:
+  - text: if the product is damaged and clear footage of unpackaging is provied only then a product can be returned.
+  utter_payment_rule:
+  - text: you can pay for a product via bkash or nagad.
+  utter_delivery_rule:
+  - text: we deliver our products in 7 working days
 actions: []
 forms: {}
 e2e_actions: []

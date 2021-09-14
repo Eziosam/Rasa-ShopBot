@@ -11,3 +11,21 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: Return Policy
+  steps:
+  - intent: return_policy
+  - action: utter_return_rule
+
+- rule: Payment Policy
+  steps:
+  - intent: payment_policy
+  - action: utter_payment_rule
+
+- rule: Delivery Policy
+  steps:
+  - intent: delivery_policy
+  - action: utter_delivery_rule
+
+
+

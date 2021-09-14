@@ -58,6 +58,10 @@ First:
 pip3 install SQLAlchemy==1.3.22
 ```
 If it still doesn't launch:
+First: 
+```
+pip install sanic-jwt==1.6.0
+```
 Delete rasa.db and events.db files (only first time)
 
 

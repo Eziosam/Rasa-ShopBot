@@ -30,13 +30,13 @@ stories:
   - intent: product_available
     entities:
     - pname: apple
-  - action: utter_fetch_product_available
+  - action: action_product_search
 - story: product quantity
   steps:
   - intent: product_quantity
     entities:
     - pname: apple
-  - action: utter_fetch_product_amount
+  - action: action_product_quantity_search
 - story: product promo
   steps:
   - intent: promo_available
@@ -48,7 +48,7 @@ stories:
   - intent: product_price
     entities:
     - pname: apple
-  - action: utter_fetch_product_price
+  - action: action_product_price_search
 
 - story: product from shop availablity
   steps:
@@ -63,6 +63,6 @@ stories:
   - action: utter_ask_address
   - intent: my_address
     entities:
-    - country: ryans
-  - action: utter_answer_fee
+    - country: india
+  - action: action_fetch_del_fee
 

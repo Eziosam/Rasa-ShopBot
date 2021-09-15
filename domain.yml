@@ -64,12 +64,6 @@ responses:
   - text: Bye
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
-  utter_fetch_product_amount:
-  - text: yes 30 unit available.
-  utter_fetch_product_price:
-  - text: five hundred.
-  utter_fetch_product_available:
-  - text: yes available.
   utter_fetch_product_promo:
   - text: no ,no promoavailable .
   utter_fetch_product_shop:
@@ -84,6 +78,10 @@ responses:
   - text: you can pay for a product via bkash or nagad.
   utter_delivery_rule:
   - text: we deliver our products in 7 working days
-actions: []
+actions:
+- action_product_search
+- action_product_price_search
+- action_product_quantity_search
+- action_fetch_del_fee
 forms: {}
 e2e_actions: []

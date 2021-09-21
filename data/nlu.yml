@@ -158,6 +158,7 @@ nlu:
     - asus
     - acer
     - hp
+    - dell
 
 - lookup: country
   examples: |

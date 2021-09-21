@@ -66,3 +66,13 @@ stories:
     - country: india
   - action: action_fetch_del_fee
 
+# New code starts here
+
+- story: product availablity
+  steps:
+  - intent: product_availablity
+    entities:
+    - product_name: headphones
+  - action: action_fetch_availability
+
+# New code ends here

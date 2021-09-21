@@ -117,3 +117,42 @@ class ActionProductDeliveryFeeSearch(Action):
           dispatcher.utter_message(text="Not Available!") 
         
 
+# New Code Starts
+
+class ActionProductAvailibitySearch(Action):
+
+    def name(self) -> Text:
+        return "action_fetch_availability"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        connection = sqlite3.connect(path_to_db)
+        cursor = connection.cursor()
+
+        product_name = [tracker.latest_message['entities'][0]['value']]
+
+        cursor.execute("SELECT in_stock_left FROM stock WHERE product_name =? ", product_name)
+        data_row = cursor.fetchone()
+
+        if len(data_row)!=0:
+          dispatcher.utter_message("Yes, only "+str(data_row[0]) +" quantity is available in the stock" )
+        else:
+          refil = [tracker.latest_message['entities'][0]['value']]
+
+          cursor.execute("SELECT refil FROM stock WHERE product_name =? ", refil)
+          data_row = cursor.fetchone()
+          if data_row: 
+            dispatcher.utter_message("The item will be available "+str(data_row[0]) +" " )
+          else:
+            dispatcher.utter_message("Do you want to contact with the seller?")
+            contact_seller = [tracker.latest_message['entities'][0]['value']]
+            if contact_seller == "yes":
+              cursor.execute("SELECT mobile_no_of_seller FROM stock WHERE product_name =? ", product_name)
+              data_row = cursor.fetchone()
+              dispatcher.utter_message("Here is the contact number of the seller: "+str(data_row[0]) +" " )
+            else:
+              dispatcher.utter_message(text="Is there anything else I can help you with?")
+
+# New Code Ends

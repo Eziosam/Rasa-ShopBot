@@ -157,6 +157,7 @@ nlu:
     - msi
     - asus
     - acer
+    - hp
 
 - lookup: country
   examples: |

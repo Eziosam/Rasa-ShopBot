@@ -156,6 +156,7 @@ nlu:
     - walton
     - msi
     - asus
+    - acer
 
 - lookup: country
   examples: |

@@ -42,7 +42,7 @@ class ActionProductSearch(Action):
 
         shoe= [tracker.latest_message['entities'][0]['value']]
 
-        cursor.execute("SELECT * FROM inventory WHERE pname=? ", shoe)
+        cursor.execute("SELECT * FROM product WHERE pname=? ", shoe)
         data_row = cursor.fetchone()
 
         if data_row:

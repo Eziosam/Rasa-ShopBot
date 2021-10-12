@@ -83,22 +83,22 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
-#- intent: product_available
-#  examples: |
-#    - do you have [apple](pname)?
-#    - is [orange](pname) available?
-#    - do you have [iphone](pname) in your stock?
-#- intent: product_quantity
-#  examples: |
-#    - how many [apple](pname) do you have in stock?
-#    - how much [orange](pname) do you have?
-#    - how many [iphone](pname) can you sell?
+- intent: product_available
+  examples: |
+    - do you have [apple](pname)?
+    - is [orange](pname) available?
+    - do you have [iphone](pname) in your stock?
+    - is [Skullcandy_Headphone](pname) available?
+- intent: product_quantity
+  examples: |
+    - how many [apple](pname) do you have in stock?
+    - how much [orange](pname) do you have?
+    - how many [iphone](pname) can you sell?
 - intent: product_price
   examples: |
     - can you tell me price of [apple](pname)?
     - [apple](pname) price please.
-    - price of [orange](pname)?
-    - price of [apple](pname)
+    - price of [Potato_Chip](pname)
 - intent: promo_available
   examples: |
     - Is there any promotional offer going on [apple](pname)?
@@ -136,8 +136,8 @@ nlu:
     - please tell me how much time do you need to deliver a product
 - intent: product_availablity
   examples: |
-    - when [headphones](product_name) will be available?
-    - how many [headphones](product_name) are in stock?
+    - when [headphones](pname) will be available?
+    - how many [headphones](pname) are in stock?
     - i want to contact with the seller
     - when headphones will be available
     - How many headphones are in stock?
@@ -146,6 +146,9 @@ nlu:
     - mango
     - book
     - speaker
+    - potatoChips
+    - wedding_ring
+    - skullcandy headphone
 - lookup: shopname
   examples: |
     - ucc

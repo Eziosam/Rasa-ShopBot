@@ -45,6 +45,8 @@ intents:
     use_entities: true
 - delivery_policy:
     use_entities: true
+-show_product_img:
+    use_entities: true
 entities:
 - pname
 - shopname
@@ -83,5 +85,6 @@ actions:
 - action_product_price_search
 - action_product_quantity_search
 - action_fetch_del_fee
+- action_carousels
 forms: {}
 e2e_actions: []

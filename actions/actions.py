@@ -42,11 +42,13 @@ class ActionProductSearch(Action):
 
         shoe= [tracker.latest_message['entities'][0]['value']]
 
-        cursor.execute("SELECT * FROM inventory WHERE pname=? ", shoe)
+        cursor.execute("SELECT pname FROM inventory WHERE pname=? ", shoe)
         data_row = cursor.fetchone()
 
         if data_row:
           dispatcher.utter_message(text="Found!")
+          dispatcher.utter_message(image='https://i.ibb.co/3c3jQNR/product-1.png') 
+                        
         else:
           dispatcher.utter_message(text="Not Available!")  
 
@@ -115,5 +117,74 @@ class ActionProductDeliveryFeeSearch(Action):
           dispatcher.utter_message("Sir ,The Delivery fee is "+str(data_row[0]) +" USD$ " )
         else:
           dispatcher.utter_message(text="Not Available!") 
+
+
+
+class ActionCarousel(Action):
+    def name(self) -> Text:
+        return "action_carousels"
+    
+    def run(self, dispatcher, tracker: Tracker, domain: "DomainDict") -> List[Dict[Text, Any]]:
         
+        
+        connection = sqlite3.connect(path_to_db)
+        cursor = connection.cursor()
+
+        pname= ["apple"]
+
+        cursor.execute("SELECT price FROM inventory WHERE pname=? ", pname)
+        data_row = cursor.fetchone()
+
+        message = {
+            "type": "template",
+            "payload": {
+                "template_type": "generic",
+                "elements": [
+                    {
+                        "title": "Sony Bravia TV",
+                        "subtitle": data_row[0],
+                        "image_url": "https://www.startech.com.bd/image/cache/catalog/Television/sony/KDL%20W600D-500x500.jpg",
+                        "buttons": [ 
+                            {
+                            "title": "Add to Cart",
+                            "payload": "Happy",
+                            "type": "postback"
+                            },
+                            {
+                            "title": "Show More",
+                            "payload": "sad",
+                            "type": "postback"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Samsung 870 EVO SSD",
+                        "subtitle": "$12",
+                        "image_url": "https://www.startech.com.bd/image/cache/catalog/ssd/samsung/870-evo/870-evo-01-500x500.jpg",
+                        
+                        "buttons": [ 
+                            {
+                            "title": "Buy",
+                            "url": "https://image.freepik.com/free-vector/city-illustration_23-2147514701.jpg",
+                            "type": "web_url"
+                            }
+                        ]
+                    },
+                          {
+                        "title": "Core i7 CPU",
+                        "subtitle": "$12,000",
+                        "image_url": "https://i.imgur.com/UfDtQuv.jpeg",
+                        "buttons": [ 
+                            {
+                            "title": "Click here",
+                            "url": "https://image.freepik.com/free-vector/city-illustration_23-2147514701.jpg",
+                            "type": "web_url"
+                            }
+                            ]
+                        }
+                   ]
+                }
+        }
+        dispatcher.utter_message(attachment=message)
+        return []
 

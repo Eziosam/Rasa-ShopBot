@@ -143,6 +143,12 @@ nlu:
     - how long do you take to deliver a product
     - please tell me how much time do you need to deliver a product
 
+- intent: show_product_img
+  examples: |
+    - show me your best products
+    - what are your best products
+    - best  products
+
 - lookup: pname
   examples: |
     - mango

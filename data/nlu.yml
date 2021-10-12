@@ -83,18 +83,16 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
-
-
-- intent: product_available
-  examples: |
-    - do you have [apple](pname)?
-    - is [orange](pname) available?
-    - do you have [iphone](pname) in your stock?
-- intent: product_quantity
-  examples: |
-    - how many [apple](pname) do you have in stock?
-    - how much [orange](pname) do you have?
-    - how many [iphone](pname) can you sell?
+#- intent: product_available
+#  examples: |
+#    - do you have [apple](pname)?
+#    - is [orange](pname) available?
+#    - do you have [iphone](pname) in your stock?
+#- intent: product_quantity
+#  examples: |
+#    - how many [apple](pname) do you have in stock?
+#    - how much [orange](pname) do you have?
+#    - how many [iphone](pname) can you sell?
 - intent: product_price
   examples: |
     - can you tell me price of [apple](pname)?
@@ -106,49 +104,48 @@ nlu:
     - Is there any promotional offer going on [apple](pname)?
     - do you have discounts on [apple](pname)?
     - any promo on  [apple](pname)?
-
 - intent: product_shop
   examples: |
     - do you have product from [ryans](shopname)
     - do you have product from [startech](shopname)
     - any [ryans](shopname) product available?
-
 - intent: delivery_charge
   examples: |
     - how much is the delivery fee
     - can you tell me the delivery fee
     - can i know the delivery fees
-
 - intent: my_address
   examples: |
     - ok my address is [india](country)
     - [india](country) is my address
     - okay , it is [india](country)
-
 - intent: return_policy
   examples: |
     - what is you refund policy
     - how can i return a product
     - please tell me the way to return a product
-
 - intent: payment_policy
   examples: |
     - what is you payment policy
     - how can i pay for a product
     - please tell me the way to pay for  a product
-
 - intent: delivery_policy
   examples: |
     - what is you regular delivery policy
     - how long do you take to deliver a product
     - please tell me how much time do you need to deliver a product
-
+- intent: product_availablity
+  examples: |
+    - when [headphones](product_name) will be available?
+    - how many [headphones](product_name) are in stock?
+    - i want to contact with the seller
+    - when headphones will be available
+    - How many headphones are in stock?
 - lookup: pname
   examples: |
     - mango
     - book
     - speaker
-
 - lookup: shopname
   examples: |
     - ucc
@@ -156,11 +153,82 @@ nlu:
     - walton
     - msi
     - asus
-
-- lookup: country
+- lookup: delivery_area
   examples: |
-    - canada
-    - america
-    - germany
-    - srrilanka
-    - afghanistan
+    - rampura
+    - badda
+    - khilgaon
+    - basabo
+    - ulon
+    - meradia
+    - shantibag
+    - shahidbag
+    - nayatola
+    - aftabnagar
+    - modhubag
+    - begunbari
+    - tejgaon
+    - mohakhali
+    - rasulbag
+    - new eskaton
+    - siddershwari
+    - bailey road
+    - mugdapara
+    - rajarbagh
+    - malibagh
+    - motijheel
+    - farmgate
+    - kafrul
+    - banani
+    - gulshan
+    - kochukhet
+    - sher-e-bangla nogor
+    - agargaon
+    - taltola
+    - nandipara
+    - golapbag
+    - gopibag
+    - dhanmondi
+    - wari
+    - old dhaka
+    - lalbagh
+    - chawk bazar
+    - azimpur
+    - katabon
+    - pilkhana
+    - jigatola
+    - mohammadapur
+    - lalmatia
+    - bashundhara
+    - demra
+    - mirpur
+    - jatrabari
+    - gabtoli
+    - gendaria
+    - sadarghat
+    - staff quarter
+    - uttara
+    - dhaka cantonment
+    - tongi
+    - pallabi
+    - keranigonj
+    - narayangonj
+    - gazipur
+    - munsigonj
+    - savar
+    - ashulia
+    - narsingdi
+    - tangail
+    - mymensingh
+    - cumilla
+    - faridpur
+    - barishal
+    - bogura
+    - rajshahi
+    - khulna
+    - sylhet
+    - chattogram
+    - jessore
+    - rangpur
+    - cox's bazar
+    - teknaf

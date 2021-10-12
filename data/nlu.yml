@@ -153,10 +153,82 @@ nlu:
     - walton
     - msi
     - asus
-- lookup: country
+- lookup: delivery_area
   examples: |
-    - canada
-    - america
-    - germany
-    - srrilanka
-    - afghanistan
+    - rampura
+    - badda
+    - khilgaon
+    - basabo
+    - ulon
+    - meradia
+    - shantibag
+    - shahidbag
+    - nayatola
+    - aftabnagar
+    - modhubag
+    - begunbari
+    - tejgaon
+    - mohakhali
+    - rasulbag
+    - new eskaton
+    - siddershwari
+    - bailey road
+    - mugdapara
+    - rajarbagh
+    - malibagh
+    - motijheel
+    - farmgate
+    - kafrul
+    - banani
+    - gulshan
+    - kochukhet
+    - sher-e-bangla nogor
+    - agargaon
+    - taltola
+    - nandipara
+    - golapbag
+    - gopibag
+    - dhanmondi
+    - wari
+    - old dhaka
+    - lalbagh
+    - chawk bazar
+    - azimpur
+    - katabon
+    - pilkhana
+    - jigatola
+    - mohammadapur
+    - lalmatia
+    - bashundhara
+    - demra
+    - mirpur
+    - jatrabari
+    - gabtoli
+    - gendaria
+    - sadarghat
+    - staff quarter
+    - uttara
+    - dhaka cantonment
+    - tongi
+    - pallabi
+    - keranigonj
+    - narayangonj
+    - gazipur
+    - munsigonj
+    - savar
+    - ashulia
+    - narsingdi
+    - tangail
+    - mymensingh
+    - cumilla
+    - faridpur
+    - barishal
+    - bogura
+    - rajshahi
+    - khulna
+    - sylhet
+    - chattogram
+    - jessore
+    - rangpur
+    - cox's bazar
+    - teknaf

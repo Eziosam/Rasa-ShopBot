@@ -66,3 +66,13 @@ stories:
     - country: india
   - action: action_fetch_del_fee
 
+- story: show images caraousel
+  steps:
+  - intent: show_product_img
+  - action: action_carousels
+
+- story: show product in range
+  steps:
+  - intent: show_product_in_range
+  - action: action_product_in_range
+

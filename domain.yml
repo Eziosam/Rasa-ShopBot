@@ -45,10 +45,20 @@ intents:
     use_entities: true
 - delivery_policy:
     use_entities: true
+- show_product_img:
+    use_entities: true
+- show_product_in_range:
+    use_entities:
+    - category
+    - start
+    - end
 entities:
 - pname
 - shopname
 - country
+- category
+- start
+- end
 slots: {}
 responses:
   utter_greet:
@@ -81,7 +91,10 @@ responses:
 actions:
 - action_product_search
 - action_product_price_search
+- action_product_in_range
 - action_product_quantity_search
 - action_fetch_del_fee
+- action_carousels
+
 forms: {}
 e2e_actions: []

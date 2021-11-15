@@ -143,24 +143,60 @@ nlu:
     - how long do you take to deliver a product
     - please tell me how much time do you need to deliver a product
 
+- intent: show_product_img
+  examples: |
+    - show me your best products
+    - what are your best products
+    - best  products
+
+- intent: show_product_in_range
+  examples: |
+    - show me your [laptop](category) in [40000](start) to [50000](end) range
+    - show me your [laptop](category) in [45000](start) to [78000](end) range
+    - show me your [laptop](category) in [80000](start) to [92000](end) range
+
 - lookup: pname
   examples: |
     - mango
     - book
     - speaker
+    - cabbage
+    - carrot
+    - lemon
+    - meat
+    - avocado
+    - acer 
+    - asus
+    - msi
+    - gigabyte
+    - bugatti
+    - pagani
+    - lamborghini
+    - ferrari
+    - table
+    - sofa
+    - bed
 
 - lookup: shopname
   examples: |
     - ucc
-    - LG
-    - walton
-    - msi
-    - asus
+    - startech
+    - ryans
+    - amazon
+    - daraz
 
 - lookup: country
   examples: |
     - canada
+    - bangladesh
     - america
     - germany
     - srrilanka
     - afghanistan
+    - india
+    - srilanka
+    - usa
+    - england
+    - uk
+    - australia
+    - pakistan
